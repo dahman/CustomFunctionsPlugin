@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ca.tdm.customfunctions-plugin</groupId>
+        <artifactId>custom-functions-plugin</artifactId>
+        <version>4.9.100.0</version>
+    </parent>
+
+    <artifactId>customfunction-plugin2</artifactId>
+    <version>4.9.100.0</version>
+    <packaging>jar</packaging>
+    <name>Custom Function Plugin #2</name>
+
+    <properties>
+        <plugin.id>welcome-plugin</plugin.id>
+        <plugin.class>com.ca.tdm.demo.customfunction.WelcomePlugin</plugin.class>
+        <plugin.version>0.1.0</plugin.version>
+        <plugin.provider>Dahman Zahrir</plugin.provider>
+        <plugin.dependencies />
+    </properties>
+
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Plugin-Id>sample2-plugin</Plugin-Id>
+                            <Plugin-Version>1.0.0.2</Plugin-Version>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
