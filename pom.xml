@@ -191,17 +191,7 @@
     </dependencies>
 
     <repositories>
-        <repository>
-            <id>maven-third-party-local</id>
-            <name>maven-third-party-local</name>
-            <url>https://artifactory-lvn.broadcom.net/artifactory/esd-tdm-maven-thirdparty-local/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
+        <!-- ADD YOUR OWN REPOSITORY TO ACCESS custom-functions-api.jar-->
     </repositories>
 
 </project>
