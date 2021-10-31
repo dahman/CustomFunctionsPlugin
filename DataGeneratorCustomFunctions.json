@@ -1,0 +1,19 @@
+[
+  {
+    "DataType": "Custom",
+    "Functions": [
+      {
+        "name": "function2(value[,value...])",
+        "type": "Numeric"
+      },
+      {
+        "name": "function1(condition,value[,value...])",
+        "type": "Date &/or Time"
+      },
+      {
+        "name": "custom3(condition,number[,number...])",
+        "type": "String"
+      }
+    ]
+  }
+]
