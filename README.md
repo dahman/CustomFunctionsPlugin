@@ -54,3 +54,8 @@ If one custom function called function1 is added then DataGeneratorCustomFunctio
 </pre>
 
 6- the json file and plugin jars should be copied to TDM install under `\CA\CA Test Data Manager Portal\tomcat\customfunctions`
+
+7- After starting the portal, you should be able to use the new custom meta function by accessing the data painter 
+
+8- Note that access to databases can be accomplished by wrapping the new custom meta function around seqlov like 
+`@function1(@seqlov(0,@sqllist(Ptravel,SELECT airport_code FROM airports where cty_id = 750)@)@)@`
