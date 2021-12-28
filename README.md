@@ -10,6 +10,7 @@ mvn install:install-file -DgroupId=com.ca.tdm.customfunctions -DartifactId=custo
 
 4- customfunction-plugin1-4.9.100.0.jar includes functionality implemented in class CustomFunction2
 
+<pre>
 `    @Extension`  
 `    public static class CustomFunction2 implements CustomFunctionRetriever {`  
   
@@ -29,7 +30,7 @@ mvn install:install-file -DgroupId=com.ca.tdm.customfunctions -DartifactId=custo
 `            throw new Exception("sorry you cannot have more than one parameter from plugin");`  
 `        }`  
 `    }`  
-  
+</pre>
 the method `getName()` provides the name of custom meta function. Same name should be added to the included json file (`DataGeneratorCustomFunctions.json`)  
 The custom meta function is implemented in method getCustomFunctionResult(String... parameters)  
 In this example implementation, if the method includes number of parameters other than one parameter, we throw an exception that will be visible to the user on the UI  
@@ -38,6 +39,7 @@ for example input `hello` is converted to `****HELLO****`
   
 5- Make sure that the json file DataGeneratorCustomFunctions.json is updated accordingly
 If one custom function called function1 is added then DataGeneratorCustomFunctions.json can be formatted as  
+<pre>
 `[`  
 `  {`  
 `    "DataType": "Custom",`  
@@ -49,5 +51,6 @@ If one custom function called function1 is added then DataGeneratorCustomFunctio
 `    ]`  
 `  }`  
 `]`  
+</pre>
 
 6- the json file and plugin jars should be copied to TDM install under `\CA\CA Test Data Manager Portal\tomcat\customfunctions`
