@@ -4,7 +4,7 @@ Portal Custom Functions Plugin Demo
 1- Download https://github.com/dahman/CustomFunctionsPlugin/tree/main/plugins/custom-functions-api-4.9.100.0.jar
 
 2- Copy the jar file to your local Maven repository:
-mvn install:install-file -DgroupId=com.ca.tdm.customfunctions -DartifactId=custom-functions-api -Dversion=4.9.100.0 -Dpackaging=jar -Dfile=custom-functions-api-4.9.100.0.jar
+`mvn install:install-file -DgroupId=com.ca.tdm.customfunctions -DartifactId=custom-functions-api -Dversion=4.9.100.0 -Dpackaging=jar -Dfile=custom-functions-api-4.9.100.0.jar`
 
 3- Do `mvn clean install` in your project folder and verify the newly-installed dependency is available and two plugin jar files created.
 
