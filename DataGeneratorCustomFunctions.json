@@ -1,17 +1,22 @@
 [
   {
-    "DataType": "Custom",
+    "DataType": "Custom1",
     "Functions": [
       {
-        "name": "function2(value[,value...])",
-        "type": "Numeric"
+        "name": "add10(value)",
+        "type": "Number"
+      }
+    ]
+  },
+  {
+    "DataType": "Custom2",
+    "Functions": [
+      {
+        "name": "function1(value)",
+        "type": "String"
       },
       {
-        "name": "function1(condition,value[,value...])",
-        "type": "Date &/or Time"
-      },
-      {
-        "name": "custom3(condition,number[,number...])",
+        "name": "function2(input1, input2)",
         "type": "String"
       }
     ]

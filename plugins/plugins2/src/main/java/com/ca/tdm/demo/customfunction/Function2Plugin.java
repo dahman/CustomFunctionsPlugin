@@ -1,6 +1,7 @@
 package main.java.com.ca.tdm.demo.customfunction;
 
 import com.ca.tdm.customfunction.CustomFunctionRetriever;
+import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.pf4j.Extension;
 import org.pf4j.Plugin;
@@ -33,7 +34,7 @@ public class Function2Plugin extends Plugin {
         // the custom function used in TDMWeb will be called function2
         @Override
         public String getName() {
-            return "function2";
+            return "add10";
         }
 
         // allows only one parameter
@@ -42,10 +43,15 @@ public class Function2Plugin extends Plugin {
         @Override
         public String getCustomFunctionResult(String... parameters) throws Exception {
             if (parameters.length == 1) {
-                if (parameters[0].startsWith("mess")) {
-                    throw new Exception("You cannot start your parameter with mess");
+                int number;
+                try{
+                    number = Integer.parseInt(parameters[0]);
                 }
-                return "****" + parameters[0].toLowerCase() + "****";
+                catch (NumberFormatException ex){
+                    throw new Exception("Make sure the input parameter is a numeric number ");
+                }
+
+                return String.valueOf(number + 10) ;
             }
             throw new Exception("sorry you cannot have more than one parameter from plugin");
         }

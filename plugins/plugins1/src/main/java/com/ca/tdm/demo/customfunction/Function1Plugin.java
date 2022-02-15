@@ -28,7 +28,7 @@ public class Function1Plugin extends Plugin {
     }
 
     @Extension
-    public static class CustomFunction2 implements CustomFunctionRetriever {
+    public static class CustomFunction1 implements CustomFunctionRetriever {
 
         // the custom function used in TDMWeb will be called function1
         @Override
